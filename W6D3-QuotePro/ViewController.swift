@@ -59,7 +59,6 @@ class ViewController: UIViewController {
                     self.authorLabel.text = quotes.quoteAuthor
                 }
                 
-//                print(quotes.quoteText)
             }
             catch {
                 print("FUCK")
@@ -67,6 +66,7 @@ class ViewController: UIViewController {
         }.resume()
         
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
@@ -78,5 +78,28 @@ class ViewController: UIViewController {
             }
         }
     }
-
+    
+    
+    @IBAction func shareButtonPressed(_ sender: Any) {
+        
+        let bounds = UIScreen.main.bounds
+        UIGraphicsBeginImageContextWithOptions(bounds.size, true, 0.0)
+        self.view.drawHierarchy(in: bounds, afterScreenUpdates: false)
+        let img = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        let activityViewController = UIActivityViewController(activityItems: [img!], applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        self.present(activityViewController, animated: true, completion: nil)
+        
+    }
+    
+    
+    @IBAction func getQuoteButtonPressed(_ sender: Any) {
+        downloadData()
+    }
+    
+    @IBAction func getImageButtonPressed(_ sender: Any) {
+        downloadImage()
+    }
+    
 }

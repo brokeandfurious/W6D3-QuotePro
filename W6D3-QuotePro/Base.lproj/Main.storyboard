@@ -150,6 +150,9 @@
                                             <state key="normal" title="Share Quote">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="shareButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xM3-mr-k1F"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -165,14 +168,32 @@
                                 </constraints>
                                 <blurEffect style="light"/>
                             </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnJ-Us-Khe">
+                                <rect key="frame" x="337" y="20" width="22" height="22"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="getImageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F9m-9u-3jY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ba-I1-CKl">
+                                <rect key="frame" x="16" y="20" width="22" height="22"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="getQuoteButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dzK-s9-5B9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BnJ-Us-Khe" secondAttribute="trailing" constant="16" id="Bvi-sW-Re3"/>
                             <constraint firstItem="jRZ-IQ-nxg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="C2V-Ib-TPj"/>
                             <constraint firstItem="jRZ-IQ-nxg" firstAttribute="top" secondItem="kuG-0k-SjN" secondAttribute="bottom" constant="-242" id="EDk-yG-y5N"/>
                             <constraint firstItem="jRZ-IQ-nxg" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Rh1-xk-Tcv"/>
+                            <constraint firstItem="6Ba-I1-CKl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ulr-X7-8qJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nbg-tt-s9f" secondAttribute="bottom" constant="33" id="Vl3-yM-wlC"/>
                             <constraint firstItem="jRZ-IQ-nxg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Xue-Uz-vN4"/>
+                            <constraint firstItem="BnJ-Us-Khe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Zc9-Pa-d8p"/>
+                            <constraint firstItem="6Ba-I1-CKl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="agR-4A-fnn"/>
                             <constraint firstItem="C5o-SH-0cz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fBp-oo-Nau"/>
                             <constraint firstItem="nbg-tt-s9f" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fCw-aT-Yka"/>
                             <constraint firstItem="C5o-SH-0cz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="102" id="hSn-FL-UQb"/>
