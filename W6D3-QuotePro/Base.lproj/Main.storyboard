@@ -77,6 +77,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nc6-0E-1JL"/>
                     </view>
+                    <navigationItem key="navigationItem" id="OX8-Zg-UdT"/>
                     <connections>
                         <outlet property="tableView" destination="bNy-I9-7kb" id="wmO-Xa-WdQ"/>
                     </connections>
@@ -112,7 +113,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Person" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuG-0k-SjN">
-                                            <rect key="frame" x="16" y="99" width="343" height="21"/>
+                                            <rect key="frame" x="16" y="89" width="343" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -187,7 +188,7 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BnJ-Us-Khe" secondAttribute="trailing" constant="16" id="Bvi-sW-Re3"/>
                             <constraint firstItem="jRZ-IQ-nxg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="C2V-Ib-TPj"/>
-                            <constraint firstItem="jRZ-IQ-nxg" firstAttribute="top" secondItem="kuG-0k-SjN" secondAttribute="bottom" constant="-242" id="EDk-yG-y5N"/>
+                            <constraint firstItem="jRZ-IQ-nxg" firstAttribute="top" secondItem="kuG-0k-SjN" secondAttribute="bottom" constant="-232" id="EDk-yG-y5N"/>
                             <constraint firstItem="jRZ-IQ-nxg" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Rh1-xk-Tcv"/>
                             <constraint firstItem="6Ba-I1-CKl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ulr-X7-8qJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nbg-tt-s9f" secondAttribute="bottom" constant="33" id="Vl3-yM-wlC"/>

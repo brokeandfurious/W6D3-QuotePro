@@ -56,7 +56,7 @@ class ViewController: UIViewController {
                 
                 DispatchQueue.main.async {
                     self.quoteLabel.text = quotes.quoteText
-                    self.authorLabel.text = quotes.quoteAuthor
+                    self.authorLabel.text = "- " + quotes.quoteAuthor
                 }
                 
             }
@@ -82,11 +82,17 @@ class ViewController: UIViewController {
     
     @IBAction func shareButtonPressed(_ sender: Any) {
         
-        let bounds = UIScreen.main.bounds
-        UIGraphicsBeginImageContextWithOptions(bounds.size, true, 0.0)
-        self.view.drawHierarchy(in: bounds, afterScreenUpdates: false)
+        UIGraphicsBeginImageContext(self.view.bounds.size)
+        self.view.layer.render(in: UIGraphicsGetCurrentContext()!)
         let img = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
+        print("Save to gallery test")
+        
+//        let bounds = UIScreen.main.bounds
+//        UIGraphicsBeginImageContextWithOptions(bounds.size, true, 0.0)
+//        self.view.drawHierarchy(in: bounds, afterScreenUpdates: false)
+//        let img = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
         let activityViewController = UIActivityViewController(activityItems: [img!], applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view
         self.present(activityViewController, animated: true, completion: nil)
