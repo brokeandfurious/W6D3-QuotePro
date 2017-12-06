@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
+    var quote: Quote!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         downloadData()
@@ -42,7 +44,6 @@ class ViewController: UIViewController {
     func downloadData() {
         guard let downloadURL = url else { return }
         URLSession.shared.dataTask(with: downloadURL) { data, urlResponse, error in
-            print("test")
             guard let data = data, error == nil, urlResponse != nil else {
                 print("wtf is wrong")
                 return
@@ -51,6 +52,7 @@ class ViewController: UIViewController {
             do {
                 let decoder = JSONDecoder()
                 let quotes = try decoder.decode(Quote.self, from: data)
+                self.quote = quotes
                 
                 DispatchQueue.main.async {
                     self.quoteLabel.text = quotes.quoteText
@@ -64,6 +66,17 @@ class ViewController: UIViewController {
             }
         }.resume()
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is TableViewController
+        {
+            if segue.identifier == "segueToSave" {
+                let vc = segue.destination as? TableViewController
+                vc?.quote = self.quote
+            }
+        }
     }
 
 }

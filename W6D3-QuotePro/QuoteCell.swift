@@ -10,7 +10,7 @@ import UIKit
 
 class QuoteCell: UITableViewCell {
     
-    @IBOutlet weak var quoteLabel: UILabel!
+    @IBOutlet weak var quoteLabel: UITextView!
     @IBOutlet weak var authorLabel: UILabel!
     
     override func awakeFromNib() {
